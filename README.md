@@ -1,1 +1,1 @@
-# Browse Information
+# Browser Information
