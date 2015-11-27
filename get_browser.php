@@ -13,7 +13,7 @@ function getBrowser()
 	$os = 'Unknown';
     $device = 'Unknown';
     $version = '';
-    $u_agent = 'Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/13.10586';
+    //$u_agent = 'Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/13.10586';
 
     //First get the platform
 	if(preg_match('/Windows Phone/i', $u_agent)){
