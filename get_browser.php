@@ -13,10 +13,12 @@ function getBrowser()
 	$os = 'Unknown';
     $device = 'Unknown';
     $version = '';
-    //$u_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko';
+    $u_agent = 'Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/13.10586';
 
     //First get the platform
-    if (preg_match('/android/i', $u_agent)) {
+	if(preg_match('/Windows Phone/i', $u_agent)){
+		$platform = 'Windows Phone';
+	}elseif (preg_match('/android/i', $u_agent)) {
         $platform = "Android";
     } elseif (preg_match('/linux/i', $u_agent)) {
         $platform = 'Linux';
@@ -147,6 +149,10 @@ function getBrowser()
 			$pattern = '/Ubuntu\/(\d+(?:\.\d+)+)/';
 			preg_match($pattern, $u_agent, $matches);
 			$os = 'Ubuntu '.$matches[1];
+		}
+	} elseif($platform == 'Windows Phone'){
+		if(strpos($u_agent, "Windows Phone 10.0") !== false){
+			$os = "Windows 10 Mobile";
 		}
 	}
 

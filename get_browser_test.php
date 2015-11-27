@@ -10,7 +10,7 @@
 // now try it
 require_once('get_browser.php');
 $ua=getBrowser();
-$yourbrowser= "Your browser: " . $ua['name'] . " " . $ua['version'] . " on " .$ua['platform'] . " reports: <br />" . $ua['userAgent'];
+$yourbrowser= "Your browser: " . $ua['name'] . " " . $ua['version'] . " on the " .$ua['platform'] . " platform with OS ". $ua['os']." reports: <br />" . $ua['userAgent'];
 print_r($yourbrowser);
 
 ?>
